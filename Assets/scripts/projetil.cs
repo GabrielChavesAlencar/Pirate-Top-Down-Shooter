@@ -6,6 +6,7 @@ public class projetil : MonoBehaviour
 {
     public float tempo;
     public GameObject explosao;
+    public bool inimigo;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +24,17 @@ public class projetil : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag=="inimigo"){
+        if(other.gameObject.tag=="inimigo"&&!inimigo){
             GameObject temp = Instantiate(explosao);
             temp.transform.position= transform.position;
             Destroy(gameObject);
             other.gameObject.GetComponent<Inimigo>().vida-=20;
+        }
+        if(other.gameObject.tag=="Player"&&inimigo){
+            GameObject temp = Instantiate(explosao);
+            temp.transform.position= transform.position;
+            Destroy(gameObject);
+            other.gameObject.GetComponent<Player>().vida-=20;
         }
     }
 }

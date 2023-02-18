@@ -22,7 +22,7 @@ public class Player : Barco
         }
         rotacionar(Input.GetAxis("Horizontal")*2f);
         if(Input.GetKeyDown(KeyCode.Return)){
-            atirar_frontal();
+            atirar_frontal(1f);
         }
         if(Input.GetKeyDown(KeyCode.Space)){
             atirar_lateral();

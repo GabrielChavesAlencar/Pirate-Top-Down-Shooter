@@ -41,14 +41,14 @@ public class Barco : MonoBehaviour
     public void rotacionar ( float direcao) {
         transform.Rotate(0,0,Time.deltaTime*direcao*-30,Space.World);
     }
-    public void atirar_frontal () {
+    public void atirar_frontal (float tempo) {
        
         if(!atirar_normal&&vida>0){
             GameObject temp = Instantiate(projetil);
             temp.transform.position = local_intancia.transform.position;
             temp.transform.localRotation = transform.localRotation;
             atirar_normal = true;
-            StartCoroutine(tiro1());
+            StartCoroutine(tiro1(tempo));
         }
     }
     public void atirar_lateral () {
@@ -97,9 +97,9 @@ public class Barco : MonoBehaviour
         else if(vida<=30&&vida>0){render.sprite=estados_barco[2];}
         else{render.sprite=estados_barco[3];}
     }
-    IEnumerator tiro1(){
+    IEnumerator tiro1(float tempo){
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(tempo);
         atirar_normal = false;
     }
     IEnumerator tiro2(){

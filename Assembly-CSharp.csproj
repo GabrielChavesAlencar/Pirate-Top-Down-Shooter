@@ -39,14 +39,15 @@
      <Compile Include="Assets\scripts\posBarraVida.cs" />
      <Compile Include="Assets\scripts\Barco.cs" />
      <Compile Include="Assets\scripts\jogo.cs" />
+     <Compile Include="Assets\scripts\Chaser.cs" />
      <Compile Include="Assets\scripts\UIvida.cs" />
      <Compile Include="Assets\scripts\Player.cs" />
-     <Compile Include="Assets\scripts\projetil.cs" />
-     <Compile Include="Assets\scripts\menu.cs" />
-     <Compile Include="Assets\scripts\Chaser.cs" />
-     <Compile Include="Assets\scripts\radar.cs" />
      <Compile Include="Assets\scripts\Inimigo.cs" />
+     <Compile Include="Assets\scripts\projetil.cs" />
+     <Compile Include="Assets\scripts\radar.cs" />
      <Compile Include="Assets\scripts\explosao.cs" />
+     <Compile Include="Assets\scripts\menu.cs" />
+     <Compile Include="Assets\scripts\BarcoShooter.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.34f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
