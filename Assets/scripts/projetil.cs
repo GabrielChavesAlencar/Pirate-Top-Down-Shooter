@@ -37,5 +37,12 @@ public class projetil : MonoBehaviour
             Destroy(gameObject);
             other.gameObject.GetComponent<Player>().vida-=15;
         }
+        if(other.gameObject.tag=="obstaculo"){
+            GameObject temp = Instantiate(explosao);
+            temp.transform.position= transform.position;
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inimigo : Barco
 {
+    
     // Start is called before the first frame update
     public radar rad;
     public bool morto;

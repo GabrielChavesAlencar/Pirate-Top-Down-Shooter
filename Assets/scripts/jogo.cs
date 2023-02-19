@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class jogo : MonoBehaviour
 {
     public GameObject [] locais_spawn;
+    public GameObject [] obstaculos;
     public static bool gameOver;
     public static bool morte_player;
     public GameObject menu_fim;
@@ -61,10 +62,18 @@ public class jogo : MonoBehaviour
     IEnumerator Spanwnador(float tempo){
         GameObject temp;
         int rand = Random.Range(0,2);
+        
         int num_local = Random.Range(0,locais_spawn.Length);
+        
         if(rand==0){temp = Instantiate(Inimigo_Chaser);}
         else{temp = Instantiate(Inimigo_Shoter);}
         temp.transform.position = locais_spawn[num_local].transform.position;
+
+        int rand_obstaculo = Random.Range(0,3);
+        int num_local2 = Random.Range(0,locais_spawn.Length);
+
+        temp = Instantiate(obstaculos[rand_obstaculo]);
+        temp.transform.position = locais_spawn[num_local2].transform.position;
         yield return new WaitForSeconds(tempo); 
         inimigo_invocado = false;   
     }

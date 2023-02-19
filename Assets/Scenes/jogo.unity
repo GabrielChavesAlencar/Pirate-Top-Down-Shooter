@@ -1355,6 +1355,10 @@ MonoBehaviour:
   - {fileID: 1929066659}
   - {fileID: 1706976661}
   - {fileID: 1060068023}
+  obstaculos:
+  - {fileID: 1130559766357482359, guid: bf58b8406d774384cb7733dc836288f5, type: 3}
+  - {fileID: 7430986238223219826, guid: 22f51590bbdaebe438df5f70b618af16, type: 3}
+  - {fileID: 510423812275297570, guid: 5e2e7b4da1699424d97c10618cd28b8a, type: 3}
   menu_fim: {fileID: 978623240}
   Inimigo_Chaser: {fileID: 4199035427381258481, guid: d8f1e7e61a1da6c4a8c157886a4514c7, type: 3}
   Inimigo_Shoter: {fileID: 193078187185492482, guid: 305d7ae7c7a81574b9ff805fc0fe7522, type: 3}
@@ -2525,7 +2529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &978623241
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3904,7 +3908,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836065778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 5.48, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 866997818}
@@ -4095,7 +4099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929066659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: -2.48, z: 0}
+  m_LocalPosition: {x: 5.44, y: 2.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 866997818}
