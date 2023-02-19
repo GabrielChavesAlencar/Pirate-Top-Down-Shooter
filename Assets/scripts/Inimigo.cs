@@ -6,6 +6,7 @@ public class Inimigo : Barco
 {
     // Start is called before the first frame update
     public radar rad;
+    public bool morto;
     
     public float distancia () {
         return Vector3.Distance(transform.position, rad.player.transform.position);
@@ -16,6 +17,7 @@ public class Inimigo : Barco
        
         
     }
+    
     public void olhar_player () {
         if(vida>0){
             Vector2 direcao =  rad.player.transform.position-transform.position;
@@ -31,5 +33,13 @@ public class Inimigo : Barco
             temp.transform.position= transform.position;
             Destroy(gameObject);
         }
+    }
+    public virtual void somar_potuacao(){
+        if(!morto){
+            if(vida<=0){
+                jogo.Score+=10;
+                morto=true;
+            }
+        }        
     }
 }

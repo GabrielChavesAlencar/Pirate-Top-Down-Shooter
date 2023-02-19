@@ -18,6 +18,7 @@ public class Chaser : Inimigo
     {
         morrer();
         situacao_barco();
+        somar_potuacao();
         
          if(rad.dentro){
             seguir();

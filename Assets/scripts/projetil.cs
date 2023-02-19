@@ -7,6 +7,7 @@ public class projetil : MonoBehaviour
     public float tempo;
     public GameObject explosao;
     public bool inimigo;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,7 @@ public class projetil : MonoBehaviour
             GameObject temp = Instantiate(explosao);
             temp.transform.position= transform.position;
             Destroy(gameObject);
-            other.gameObject.GetComponent<Player>().vida-=20;
+            other.gameObject.GetComponent<Player>().vida-=15;
         }
     }
 }

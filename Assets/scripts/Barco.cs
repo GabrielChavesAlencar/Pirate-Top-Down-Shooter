@@ -39,7 +39,9 @@ public class Barco : MonoBehaviour
     }
 
     public void rotacionar ( float direcao) {
-        transform.Rotate(0,0,Time.deltaTime*direcao*-30,Space.World);
+        if(vida>0){
+            transform.Rotate(0,0,Time.deltaTime*direcao*-30,Space.World);
+        }
     }
     public void atirar_frontal (float tempo) {
        

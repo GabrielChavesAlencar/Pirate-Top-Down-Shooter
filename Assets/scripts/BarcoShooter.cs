@@ -10,7 +10,7 @@ public class BarcoShooter : Inimigo
     {
         VidaMaxima = 100;
         vida = VidaMaxima;
-        velocidade=0.8f;
+        velocidade=0.6f;
     }
 
     // Update is called once per frame
@@ -18,10 +18,11 @@ public class BarcoShooter : Inimigo
     {
         morrer();
         situacao_barco();
+        somar_potuacao();
         
          if(rad.dentro){
             distan = distancia();
-            if(distancia()>7){
+            if(distancia()>5.5f){
                 seguir();
             }
             else{

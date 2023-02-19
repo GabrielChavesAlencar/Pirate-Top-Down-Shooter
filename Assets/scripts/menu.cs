@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
+    public static float tempo_jogo;
+    public static float tempo_spawn;
     // Start is called before the first frame update
     void Start()
     {
