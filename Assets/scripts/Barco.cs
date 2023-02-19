@@ -33,19 +33,19 @@ public class Barco : MonoBehaviour
          
     }
     public void andar_frente () {
-        if(vida>0){
+        if(vida>0&&!jogo.gameOver){
         transform.Translate(0,Time.deltaTime*velocidade,0);
        }
     }
 
     public void rotacionar ( float direcao) {
-        if(vida>0){
+        if(vida>0&&!jogo.gameOver){
             transform.Rotate(0,0,Time.deltaTime*direcao*-30,Space.World);
         }
     }
     public void atirar_frontal (float tempo) {
        
-        if(!atirar_normal&&vida>0){
+        if(!atirar_normal&&vida>0&&!jogo.gameOver){
             GameObject temp = Instantiate(projetil);
             temp.transform.position = local_intancia.transform.position;
             temp.transform.localRotation = transform.localRotation;
@@ -54,7 +54,7 @@ public class Barco : MonoBehaviour
         }
     }
     public void atirar_lateral () {
-        if(!atirar_especial&&vida>0){
+        if(!atirar_especial&&vida>0&&!jogo.gameOver){
             atirar_especial = true;
             GameObject temp = Instantiate(projetil);
             temp.transform.position = local_intancia2.transform.position;

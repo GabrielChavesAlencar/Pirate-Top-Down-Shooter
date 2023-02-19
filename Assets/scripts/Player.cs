@@ -16,7 +16,7 @@ public class Player : Barco
     void Update()
     {
         morrer();
-        if(vida<=0){jogo.gameOver=true;}
+        if(vida<=0){jogo.gameOver=true;jogo.morte_player =true;}
         if(Input.GetKey(KeyCode.UpArrow)){
             andar_frente();
         }
